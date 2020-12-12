@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "436758158",
+    "project_id": "bknetapp",
+    "firebase_url": "https://bknetapp-default-rtdb.firebaseio.com/",
+    "storage_bucket": "bknetapp.appspot.com"
+  },
+  "client": [
+    {
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3D0df5yuvL1LwisTK_3lYcV2rMLuFsZA"
+        }
+      ],
+      "client_info": {
+        "android_client_info": {
+          "package_name": "com.blogspot.atifsoftwares.firebaseapp",
+          "certificate_hash": "698fe4ab2f72da138276f09927f91606c78774cb"
+        },
+        "mobilesdk_app_id": "1:436758158:android:258cbabc924ce9bb74cbdf"
+      },
+      "oauth_client": [
+        {
+          "client_id": "436758158-scp9sg39l1voqs3fuf9tdo03kqdfcsc2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436758158-scp9sg39l1voqs3fuf9tdo03kqdfcsc2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
