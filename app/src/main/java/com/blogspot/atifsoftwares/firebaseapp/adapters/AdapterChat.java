@@ -105,10 +105,10 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.MyHolder> {
             public void onClick(View v) {
                 //show delete message confirm dialog
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
-                builder.setTitle("Delete");
-                builder.setMessage("Are you sure to delete this message?");
+                builder.setTitle("Xóa");
+                builder.setMessage("Bạn có muốn xóa cuộc trò chuyện này?");
                 //delete button
-                builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                builder.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
@@ -131,10 +131,10 @@ public class AdapterChat extends RecyclerView.Adapter<AdapterChat.MyHolder> {
         //set seen/delivered status of message
         if (i==chatList.size()-1){
             if (chatList.get(i).isSeen()){
-                myHolder.isSeenTv.setText("Seen");
+                myHolder.isSeenTv.setText("Đã xem");
             }
             else {
-                myHolder.isSeenTv.setText("Delivered");
+                myHolder.isSeenTv.setText("Đã gửi");
             }
         }
         else {

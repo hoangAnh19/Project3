@@ -17,7 +17,7 @@
             android:id="@+id/pTitleEt"
             android:background="@drawable/editextstyle"
             android:padding="10dp"
-            android:hint="Enter title"
+            android:hint="Tiêu đề bài viết"
             android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -25,7 +25,7 @@
         <!--ImageView: Input post image-->
         <ImageView
             android:id="@+id/pImageIv"
-            android:background="#D3FF5722"
+            android:background="#2196F3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="200dp"/>
@@ -35,7 +35,7 @@
             android:id="@+id/pDescriptionEt"
             android:background="@drawable/editextstyle"
             android:padding="10dp"
-            android:hint="Enter description"
+            android:hint="Bạn đang nghĩ gì?"
             android:inputType="textCapSentences|textMultiLine"
             android:minHeight="120dp"
             android:gravity="start"
@@ -50,30 +50,12 @@
         <!--Button: Publish post to firbease-->
         <Button
             android:id="@+id/pUploadBtn"
-            android:background="#D3FF5722"
-            android:text="Upload"
+            android:background="#4267b2"
+            android:text="Đăng tải"
             android:layout_gravity="end"
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/pAnonymouseBtn"
-                android:background="#D3FF5722"
-                android:text="Anonymouse"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_height="wrap_content" />
-
-            <Button
-                android:id="@+id/pUsernameBtn"
-                android:background="#D3FF5722"
-                android:text="Username"
-                android:layout_gravity="end"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"/>
 
         </LinearLayout>
     </LinearLayout>

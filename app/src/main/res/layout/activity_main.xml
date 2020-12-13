@@ -8,16 +8,17 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="350dp"
+        android:layout_height="331dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:src="@drawable/firebase_logo" />
+        android:background="#4267b2"
+        android:src="@drawable/logo" />
 
     <!--Button: Register-->
     <Button
         android:id="@+id/register_btn"
-        android:background="#D3FF5722"
+        android:background="#4267b2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/login_btn"
@@ -25,12 +26,13 @@
         android:drawableStart="@drawable/ic_register_white"
         android:drawableLeft="@drawable/ic_register_white"
         android:minWidth="230dp"
-        android:text="Register" />
+        android:text="ĐĂNG KÝ"
+        android:layout_marginBottom="20dp"/>
 
     <!--Button: Login-->
     <Button
         android:id="@+id/login_btn"
-        android:background="#D3FF5722"
+        android:background="#4267b2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -39,6 +41,6 @@
         android:drawableStart="@drawable/ic_login_white"
         android:drawableLeft="@drawable/ic_login_white"
         android:minWidth="230dp"
-        android:text="Login" />
+        android:text="ĐĂNG NHẬP" />
 
 </RelativeLayout>

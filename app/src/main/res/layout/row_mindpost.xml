@@ -33,7 +33,7 @@
                     android:id="@+id/uNameTv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Name"
+                    android:text="Nhiệm vụ"
                     android:textColor="@color/colorBlack"
                     android:textSize="20sp" />
 
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="72dp"
             android:gravity="center"
-            android:text="The description of the post"
+            android:text="Nội dung"
             android:textColor="@color/colorBlack" />
 
         <View
@@ -61,15 +61,16 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center">
+
             <Button
                 android:id="@+id/likeBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="공감"
-                android:drawableLeft="@drawable/ic_like_black"
+                android:layout_height="match_parent"
                 android:background="@color/colorWhite"
+                android:drawableStart="@drawable/ic_love"
+                android:drawableLeft="@drawable/ic_like_black"
                 android:drawablePadding="5dp"
-                android:drawableStart="@drawable/ic_love" />
+                android:text="Yêu thích" />
 
         </LinearLayout>
 

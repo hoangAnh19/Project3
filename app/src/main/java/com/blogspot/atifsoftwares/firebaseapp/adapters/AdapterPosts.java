@@ -104,8 +104,8 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         myHolder.pTimeTv.setText(pTime);
         myHolder.pTitleTv.setText(pTitle);
         myHolder.pDescriptionTv.setText(pDescription);
-        myHolder.pLikesTv.setText(pLikes +" Likes"); //e.g. 100 Likes
-        myHolder.pCommentsTv.setText(pComments +" Comments"); //e.g. 100 Likes
+        myHolder.pLikesTv.setText(pLikes +" Thích"); //e.g. 100 Likes
+        myHolder.pCommentsTv.setText(pComments +" Bình luận"); //e.g. 100 Likes
         //set likes for each post
         setLikes(myHolder, pId);
 
@@ -165,7 +165,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                             else {
                                 // not liked, like it
                                 postsRef.child(postIde).child("pLikes").setValue(""+(pLikes+1));
-                                likesRef.child(postIde).child(myUid).setValue("Liked"); //set any value
+                                likesRef.child(postIde).child(myUid).setValue("Thích"); //set any value
                                 mProcessLike = false;
                             }
                         }
@@ -285,7 +285,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                     Change drawable left icon of like button
                     Change text of like button from "Like" to "Liked"*/
                     holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_liked, 0,0,0);
-                    holder.likeBtn.setText("Liked");
+                    holder.likeBtn.setText("Thích");
                 }
                 else {
                     //user has not liked this post
@@ -293,7 +293,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                     Change drawable left icon of like button
                     Change text of like button from "Liked" to "Like"*/
                     holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_like_black, 0,0,0);
-                    holder.likeBtn.setText("Like");
+                    holder.likeBtn.setText("Thích");
                 }
             }
 
@@ -311,10 +311,10 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
         //show delete option in only post(s) of currently signed-in user
         if (uid.equals(myUid)){
             //add items in menu
-            popupMenu.getMenu().add(Menu.NONE, 0, 0, "Delete");
-            popupMenu.getMenu().add(Menu.NONE, 1, 0, "Edit");
+            popupMenu.getMenu().add(Menu.NONE, 0, 0, "Xóa");
+            popupMenu.getMenu().add(Menu.NONE, 1, 0, "Chỉnh sửa");
         }
-        popupMenu.getMenu().add(Menu.NONE, 2, 0, "View Detail");
+        popupMenu.getMenu().add(Menu.NONE, 2, 0, "Xem chi tiết");
 
         //item click listener
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -363,7 +363,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
     private void deleteWithImage(final String pId, String pImage) {
         //progress bar
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("Deleting...");
+        pd.setMessage("Đang xóa...");
 
         /*Steps:
           1) Delete Image using url
@@ -384,7 +384,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                                     ds.getRef().removeValue(); // remove values from firebase where pid matches
                                 }
                                 //deleted
-                                Toast.makeText(context, "Deleted successfully", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(context, "Đã xóa thành công", Toast.LENGTH_SHORT).show();
                                 pd.dismiss();
                             }
 
@@ -408,7 +408,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
 
     private void deleteWithoutImage(String pId) {
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("Deleting...");
+        pd.setMessage("Đang xóa...");
 
         Query fquery = FirebaseDatabase.getInstance().getReference("Posts").orderByChild("pId").equalTo(pId);
         fquery.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -418,7 +418,7 @@ public class AdapterPosts extends RecyclerView.Adapter<AdapterPosts.MyHolder> {
                     ds.getRef().removeValue(); // remove values from firebase where pid matches
                 }
                 //deleted
-                Toast.makeText(context, "Deleted successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Đã xóa thành công", Toast.LENGTH_SHORT).show();
                 pd.dismiss();
             }
 

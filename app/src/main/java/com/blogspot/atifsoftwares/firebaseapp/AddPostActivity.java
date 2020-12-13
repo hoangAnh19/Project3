@@ -135,8 +135,8 @@ public class AddPostActivity extends AppCompatActivity {
         descriptionEt = findViewById(R.id.pDescriptionEt);
         imageIv = findViewById(R.id.pImageIv);
         uploadBtn = findViewById(R.id.pUploadBtn);
-        anonymouseBtn = findViewById(R.id.pAnonymouseBtn); // gy : 버튼에 대한 아이디 가져옴
-        username = findViewById(R.id.pUsernameBtn); // gy : 버튼에 대한 아이디
+//       anonymouseBtn = findViewById(R.id.pAnonymouseBtn); // gy : 버튼에 대한 아이디 가져옴
+//        username = findViewById(R.id.pUsernameBtn); // gy : 버튼에 대한 아이디
 
 
         //get data through intent from previous activitie's adapter
@@ -213,7 +213,8 @@ public class AddPostActivity extends AppCompatActivity {
                 else {
                     uploadData(title, description);
                 }
-                // gy : update버튼 클릭 시 게시판 화면으로 이동
+                // gy
+                // : update버튼 클릭 시 게시판 화면으로 이동
                 Intent intent = new Intent(getApplicationContext(), DashboardActivity.class);
                 startActivity(intent);
 
@@ -221,33 +222,33 @@ public class AddPostActivity extends AppCompatActivity {
         });
 
         // gy : 익명 버튼에 대한 클릭 이벤트 발생
-        anonymouseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-              //  if(flag == 1) {// gy : 실명에서 익명으로
-                    //flag = 0;
-                Aname = "anonymouse"; //gy : 이름을 익명으로 만들어줌
-                //anonymouseBtn.setText("user name"); // gy : 버튼 내용을 바꿔줌
-                Toast.makeText(AddPostActivity.this, "name is anonymouse...", Toast.LENGTH_SHORT).show();
-               // } 버튼 하나로 하려 했으나 실패....
-//                else if(flag == 0) {
-//                    flag = 1;
-//                    Aname = name; // gy : 원래 이름은 바꿔줌
-//                    anonymouseBtn.setText("Anonymouse"); // gy : 버튼을 내용을 anonymouse로 바꿔줌
-//
-//                }
-            }
-        });
+//        anonymouseBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//              //  if(flag == 1) {// gy : 실명에서 익명으로
+//                    //flag = 0;
+//                Aname = "anonymouse"; //gy : 이름을 익명으로 만들어줌
+//                //anonymouseBtn.setText("user name"); // gy : 버튼 내용을 바꿔줌
+//                Toast.makeText(AddPostActivity.this, "name is anonymouse...", Toast.LENGTH_SHORT).show();
+//               // } 버튼 하나로 하려 했으나 실패....
+////                else if(flag == 0) {
+////                    flag = 1;
+////                    Aname = name; // gy : 원래 이름은 바꿔줌
+////                    anonymouseBtn.setText("Anonymouse"); // gy : 버튼을 내용을 anonymouse로 바꿔줌
+////
+////                }
+//            }
+//        });
 
         //gy : 자신의 이름으로 포스트 하는 버튼 클릭 이벤트 발생
-        username.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Aname = name;
-                Toast.makeText(AddPostActivity.this, "name is yourname...", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        username.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View v) {
+//                Aname = name;
+//                Toast.makeText(AddPostActivity.this, "name is yourname...", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
     }
 

@@ -128,6 +128,7 @@ public class MindPostFragment extends Fragment {
                 for (DataSnapshot ds: dataSnapshot.getChildren()){
                     ModelMindpost modelMindpost = ds.getValue(ModelMindpost.class);
 
+
                     if (modelMindpost.getmDescr().toLowerCase().contains(searchQuery.toLowerCase())){
                         MindpostList.add(modelMindpost);
                     }

@@ -35,7 +35,7 @@
                 android:layout_weight="1">
                 <TextView
                     android:id="@+id/uNameTv"
-                    android:text="Name"
+                    android:text="Tên"
                     android:textColor="@color/colorBlack"
                     android:textSize="20sp"
                     android:layout_width="wrap_content"
@@ -67,7 +67,7 @@
             android:autoLink="all"/>
         <TextView
             android:id="@+id/pDescriptionTv"
-            android:text="The description of the post"
+            android:text="Nội dung"
             android:textColor="@color/colorBlack"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -86,16 +86,16 @@
                 android:id="@+id/pLikesTv"
                 android:text="1.2k Likes"
                 android:layout_weight="1"
-                android:textColor="#D3FF5722"
+                android:textColor="#4267b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
                 android:id="@+id/pCommentsTv"
-                android:text="1.2k Comments"
+                android:text="1.2k Bình luận"
                 android:layout_weight="1"
                 android:textAlignment="textEnd"
-                android:textColor="#D3FF5722"
+                android:textColor="#4267b2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="end" />
@@ -117,7 +117,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="LIKE"
+                android:text="Thích"
                 android:drawableLeft="@drawable/ic_like_black"
                 android:background="@color/colorWhite"
                 android:drawablePadding="5dp"
@@ -127,7 +127,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="COMMENT"
+                android:text="Bình luân"
                 android:drawableLeft="@drawable/ic_comment_black"
                 android:background="@color/colorWhite"
                 android:drawablePadding="5dp"
@@ -138,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="SHARE"
+                android:text="Chia sẽ"
                 android:drawableLeft="@drawable/ic_share_black"
                 android:drawablePadding="5dp"
                 android:background="@color/colorWhite"

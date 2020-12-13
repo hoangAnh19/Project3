@@ -83,16 +83,16 @@ public class AdapterComments extends RecyclerView.Adapter<AdapterComments.MyHold
                     //my comment
                     //show delete dialog
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getRootView().getContext());
-                    builder.setTitle("Delete");
-                    builder.setMessage("Are you sure to delete this comment?");
-                    builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                    builder.setTitle("Xóa");
+                    builder.setMessage("Bạn muốn xóa bình luận này?");
+                    builder.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //delete comment
                             deleteComment(cid);
                         }
                     });
-                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             //dismiss dialog
@@ -104,7 +104,7 @@ public class AdapterComments extends RecyclerView.Adapter<AdapterComments.MyHold
                 }
                 else {
                     //not my comment
-                    Toast.makeText(context, "Can't delete other's comment...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Không thể xóa...", Toast.LENGTH_SHORT).show();
                 }
             }
         });

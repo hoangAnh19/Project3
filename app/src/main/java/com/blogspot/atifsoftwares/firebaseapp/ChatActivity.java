@@ -198,7 +198,7 @@ public class ChatActivity extends AppCompatActivity {
                             Calendar cal = Calendar.getInstance(Locale.ENGLISH);
                             cal.setTimeInMillis(Long.parseLong(onlineStatus));
                             String dateTime = DateFormat.format("dd/MM/yyyy hh:mm aa", cal).toString();
-                            userStatusTv.setText("Last seen at: " + dateTime);
+                            userStatusTv.setText("Online lần cuối: " + dateTime);
 
                         }
                     }
@@ -237,7 +237,7 @@ public class ChatActivity extends AppCompatActivity {
                 //check if text is empty or not
                 if (TextUtils.isEmpty(message)) {
                     //text empty
-                    Toast.makeText(ChatActivity.this, "Cannot send the empty message...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ChatActivity.this, "Không được để trống tin nhắn...", Toast.LENGTH_SHORT).show();
                 } else {
                     //text not empty
                     sendMessage(message);
@@ -287,11 +287,11 @@ public class ChatActivity extends AppCompatActivity {
 
     private void showImagePickDialog() {
         //options(camera, gallery) to show in dialog
-        String[] options = {"Camera", "Gallery"};
+        String[] options = {"Máy ảnh", "Thư viện"};
 
         //dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Choose Image from");
+        builder.setTitle("Chọn ảnh từ");
         //set options to dialog
         builder.setItems(options, new DialogInterface.OnClickListener() {
             @Override
@@ -331,8 +331,8 @@ public class ChatActivity extends AppCompatActivity {
     private void pickFromCamera() {
         //intent to pick image from camera
         ContentValues cv = new ContentValues();
-        cv.put(MediaStore.Images.Media.TITLE,"Temp Pick");
-        cv.put(MediaStore.Images.Media.DESCRIPTION,"Temp Descr");
+        cv.put(MediaStore.Images.Media.TITLE,"Tên Ảnh");
+        cv.put(MediaStore.Images.Media.DESCRIPTION,"Miêu Tả");
         image_rui = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, cv);
 
 
@@ -506,7 +506,7 @@ public class ChatActivity extends AppCompatActivity {
 
         //progress dialog
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Sending image...");
+        progressDialog.setMessage("Đang gửi ảnh....");
         progressDialog.show();
 
         final String timeStamp = ""+System.currentTimeMillis();

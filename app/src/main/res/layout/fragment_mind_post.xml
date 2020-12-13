@@ -9,29 +9,27 @@
     <EditText
         android:id="@+id/postDscEt"
         android:layout_width="match_parent"
-        android:layout_height="33dp"
-        android:background="#B5FF5722"
+        android:layout_height="60dp"
+        android:background="#3b5998"
         android:gravity="center"
-        android:hint="Enter description"
         android:inputType="textCapSentences|textMultiLine"
         android:minHeight="120dp"
         android:padding="10dp"
-        android:text="남은시간 : 3일 남았습니다."
+        android:hint="Thời gian còn lại"
         android:textColor="@color/colorWhite"
-        android:textSize="10dp"
+        android:textSize="15dp"
         android:textStyle="bold" />
 
-    <TextView
+    <EditText
         android:id="@+id/mindpostTime"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#B5FF5722"
+        android:background="#4267b2"
         android:gravity="center"
-        android:hint="Enter description"
         android:inputType="textCapSentences|textMultiLine"
         android:minHeight="120dp"
         android:padding="10dp"
-        android:text="인생이 너무 힘들어요 어떻게 할까요?"
+        android:hint="Nhiệm vụ cần hoàn thành"
         android:textColor="@color/colorWhite"
         android:textSize="20dp"
         android:textStyle="bold" />

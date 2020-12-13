@@ -190,7 +190,7 @@ public class AdapterMindposts extends RecyclerView.Adapter<AdapterMindposts.MyHo
                     Change drawable left icon of like button
                     Change text of like button from "Like" to "Liked"*/
                     holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_love, 0,0,0);
-                    holder.likeBtn.setText("공감");
+                    holder.likeBtn.setText("Thích");
                 }
                 else {
                     //user has not liked this post
@@ -198,7 +198,7 @@ public class AdapterMindposts extends RecyclerView.Adapter<AdapterMindposts.MyHo
                     Change drawable left icon of like button
                     Change text of like button from "Liked" to "Like"*/
                     holder.likeBtn.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_unlove, 0,0,0);
-                    holder.likeBtn.setText("비공감");
+                    holder.likeBtn.setText("Không thích");
                 }
             }
 
@@ -259,7 +259,7 @@ public class AdapterMindposts extends RecyclerView.Adapter<AdapterMindposts.MyHo
     //마인드 포스트 삭제 : 이소연
     private void  deleteMindPost(String pId) {
         final ProgressDialog pd = new ProgressDialog(context);
-        pd.setMessage("Deleting...");
+        pd.setMessage("Đang xóa...");
 
         Query fquery = FirebaseDatabase.getInstance().getReference("MindPosts").orderByChild("pId").equalTo(pId);
         fquery.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -269,7 +269,7 @@ public class AdapterMindposts extends RecyclerView.Adapter<AdapterMindposts.MyHo
                     ds.getRef().removeValue(); // remove values from firebase where pid matches
                 }
                 //deleted
-                Toast.makeText(context, "Deleted successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Đã xóa thành công", Toast.LENGTH_SHORT).show();
                 pd.dismiss();
             }
 

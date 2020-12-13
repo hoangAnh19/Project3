@@ -20,7 +20,7 @@
                 android:id="@+id/coverIv"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
-                android:background="#D3FF5722"
+                android:background="#4267b2"
                 android:scaleType="fitXY">
 
             </ImageView>
@@ -38,7 +38,7 @@
                     android:layout_height="120dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginLeft="20dp"
-                    android:background="#D3FF5722"
+                    android:background="#4267b2"
                     android:padding="5dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/ic_default_img_white" />
@@ -104,6 +104,6 @@
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/ic_edit_white"
-        app:backgroundTint="#D3FF5722" />
+        app:backgroundTint="#4267b2" />
 
 </RelativeLayout>
